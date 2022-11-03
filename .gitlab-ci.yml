@@ -46,7 +46,7 @@ Importmap Shared-deps:
     - apk add git curl bash jq
     - git config --global user.email "$CI_PROJECT_NAME-$CI_COMMIT_BRANCH@deploy.com"
     - git config --global user.name "$CI_PROJECT_NAME"
-    - git clone -b $CI_COMMIT_BRANCH https://husni:Rp6vtkqxG6NxynMwVsLH@git.edenfarm.id/project-version3/erp-dashboard/shared-dependencies.git /shared-deps
+    - git clone -b $CI_COMMIT_BRANCH https://$GITLAB_CI_ACCESS:$GITLAB_CI_TOKEN@git.edenfarm.id/project-version3/erp-dashboard/shared-dependencies.git /shared-deps
     - cd /shared-deps
   script:
     - >
