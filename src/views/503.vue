@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="OpenSans">
     <v-row>
       <v-col>
         <div style="padding-top: 5%; text-align: center">

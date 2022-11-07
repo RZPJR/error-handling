@@ -2,6 +2,7 @@ import Vue from "vue";
 import VueRouter from "vue-router";
 import Error503 from "../views/503.vue";
 import Error403 from "../views/403.vue";
+import Error404 from "../views/404.vue";
 
 Vue.use(VueRouter);
 
@@ -20,6 +21,14 @@ const routes = [
     component: Error403,
     meta: {
       title: "Forbidden",
+    },
+  },
+  {
+    path: "/error/404",
+    name: "PageNotFound",
+    component: Error404,
+    meta: {
+      title: "Page not found!",
     },
   },
 ];
