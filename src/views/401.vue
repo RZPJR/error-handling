@@ -2,7 +2,7 @@
     <div class="OpenSans">
         <v-row>
             <v-col>
-                <div style="padding-top: 5%; text-align:center">
+                <div class="error-image">
                     <img :src="logo_url" alt="image">
                 </div>
             </v-col>
@@ -11,7 +11,7 @@
         <v-row>
             <v-col>
                 <div class="text-center">
-                    <h1 style="font-size:35px">Unauthorized Access</h1>
+                    <h1 class="fs35">Unauthorized Access</h1>
                 </div>
             </v-col>
         </v-row>
@@ -19,7 +19,7 @@
         <v-row>
             <v-col>
                 <div class="text-center">
-                    <span style="font-size:20px; color: grey;">Your account does not have access to this page</span>
+                    <span class="error-message">Your account does not have access to this page</span>
                 </div>
             </v-col>
         </v-row>
@@ -28,10 +28,11 @@
             <v-col>
                 <div class="text-center">
                     <v-btn
-                        @click="refresh"
+                        id="errorButton"
                         height="50"
-                        style="color: white; border-radius: 25px; background-color: #768F9C;"
-                        >Back to Dashboard
+                        @click="refresh"
+                    >
+                        Back to Dashboard
                     </v-btn>
                 </div>
             </v-col>

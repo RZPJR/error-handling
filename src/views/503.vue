@@ -2,7 +2,7 @@
     <div class="OpenSans">
         <v-row>
             <v-col>
-                <div style="padding-top: 5%; text-align: center">
+                <div class="error-image">
                     <img :src="logo_url" alt="image" />
                 </div>
             </v-col>
@@ -11,7 +11,7 @@
         <v-row>
             <v-col>
                 <div class="text-center">
-                    <h1 style="font-size: 35px">Dashboard is Under Maintenance</h1>
+                    <h1 class="fs35">Dashboard is Under Maintenance</h1>
                 </div>
             </v-col>
         </v-row>
@@ -19,8 +19,10 @@
         <v-row>
             <v-col>
                 <div class="text-center">
-                    <span style="font-size: 20px; color: grey">We apologize for any inconvenience caused</span><br />
-                    <span style="font-size: 20px; color: grey">Please check back later or refresh page</span>
+                    <span class="error-message">
+                        We apologize for any inconvenience caused<br />
+                        Please check back later or refresh page
+                    </span>
                 </div>
             </v-col>
         </v-row>
@@ -29,9 +31,9 @@
             <v-col>
                 <div style="padding-top: 2%" class="text-center">
                     <v-btn
-                        @click="refresh"
+                        id="errorButton"
                         height="50"
-                        style="color: white; border-radius: 25px; background-color: #768f9c"
+                        @click="refresh"
                     >
                         Refresh
                     </v-btn>

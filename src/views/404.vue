@@ -2,7 +2,7 @@
     <div class="OpenSans">
         <v-row>
             <v-col>
-                <div style="padding-top: 9%; text-align:center">
+                <div class="error-image">
                     <img :src="logo_url" alt="image">
                 </div>
             </v-col>
@@ -11,7 +11,7 @@
         <v-row>
             <v-col>
                 <div class="text-center">
-                    <h1 style="font-size:35px">Page Not Found</h1>
+                    <h1 class="fs35">Page Not Found</h1>
                 </div>
             </v-col>
         </v-row>
@@ -19,7 +19,7 @@
         <v-row>
             <v-col>
                 <div class="text-center">
-                    <span style="font-size:20px; color: grey;">The page you are looking for is not found</span>
+                    <span class="error-message">The page you are looking for is not found</span>
                 </div>
             </v-col>
         </v-row>
@@ -28,9 +28,9 @@
           <v-col>
             <div class="text-center">
                 <v-btn
-                    @click="refresh"
+                    id="errorButton"
                     height="50"
-                    style="color: white; border-radius: 25px; background-color: #768F9C;"
+                    @click="refresh"
                 >
                     Back to Dashboard
                 </v-btn>
