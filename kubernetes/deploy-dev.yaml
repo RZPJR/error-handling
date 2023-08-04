@@ -42,7 +42,7 @@ spec:
       - name: registry
       containers:
       - name: error-handling
-        image: git.edenfarm.id:5050/project-version3/erp-dashboard/error-handling/dev:<VERSION>
+        image: git.edenfarm.id:5050/project-version3/erp-dashboard/error-handling/eks-dev:<VERSION>
         ports:
         - name: http-port
           containerPort: 8080
