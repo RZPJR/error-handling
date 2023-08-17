@@ -135,8 +135,8 @@ metadata:
   namespace: error-handling
 spec:
   dnsNames:
-  - dev-error-handling.edenfarm.tech
-  secretName: dev-error-handling-tls
+  - error-handling.edenfarm.tech
+  secretName: error-handling-tls
   issuerRef:
     name: letsencrypt-cluster-issuer
     kind: ClusterIssuer
@@ -152,10 +152,10 @@ spec:
   ingressClassName: nginx
   tls:
   - hosts:
-    - dev-error-handling.edenfarm.tech
-    secretName: dev-error-handling-tls
+    - error-handling.edenfarm.tech
+    secretName: error-handling-tls
   rules:
-  - host: dev-error-handling.edenfarm.tech
+  - host: error-handling.edenfarm.tech
     http:
       paths:
       - path: /
