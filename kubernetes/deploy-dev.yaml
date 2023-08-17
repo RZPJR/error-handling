@@ -42,7 +42,7 @@ spec:
       - name: registry
       containers:
       - name: error-handling
-        image: git.edenfarm.id:5050/project-version3/erp-dashboard/error-handling/eks-dev:<VERSION>
+        image: git.edenfarm.id:5050/project-version3/erp-dashboard/error-handling/dev:<VERSION>
         ports:
         - name: http-port
           containerPort: 8080
@@ -135,8 +135,8 @@ metadata:
   namespace: error-handling
 spec:
   dnsNames:
-  - error-handling.edenfarm.tech
-  secretName: error-handling-tls
+  - dev-error-handling.edenfarm.tech
+  secretName: dev-error-handling-tls
   issuerRef:
     name: letsencrypt-cluster-issuer
     kind: ClusterIssuer
@@ -146,15 +146,16 @@ kind: Ingress
 metadata:
   namespace: error-handling
   annotations:
-    kubernetes.io/ingress.class: "nginx"
+    nginx.ingress.kubernetes.io/rewrite-target: /
   name: error-handling
 spec:
+  ingressClassName: nginx
   tls:
   - hosts:
-    - error-handling.edenfarm.tech
-    secretName: error-handling-tls
+    - dev-error-handling.edenfarm.tech
+    secretName: dev-error-handling-tls
   rules:
-  - host: error-handling.edenfarm.tech
+  - host: dev-error-handling.edenfarm.tech
     http:
       paths:
       - path: /
